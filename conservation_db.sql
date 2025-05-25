@@ -58,3 +58,7 @@ SELECT COUNT(DISTINCT species_id) AS unique_species_count FROM sightings;
 SELECT sighting_id species_id, ranger_id, location, sighting_time, notes from sightings
 WHERE location LIKE '%Pass%';
 
+-- Problem - 7
+UPDATE species
+SET conservation_status = 'Historic'
+Where discovery_date < '1800-01-01';
