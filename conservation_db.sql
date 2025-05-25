@@ -10,7 +10,7 @@ INSERT INTO rangers (name, region)
 VALUES ('Alice Green', 'Northern Hills'),
         ('Bob White', 'River Delta'),
         ('Carol King ', 'Mountain Range'),
-         ('HOTOVAGA King ', 'Sundarban Range');
+       
 SELECT*FROM rangers;
 
 CREATE TABLE species (
@@ -57,3 +57,4 @@ SELECT COUNT(DISTINCT species_id) AS unique_species_count FROM sightings;
 -- Problem - 3
 SELECT sighting_id species_id, ranger_id, location, sighting_time, notes from sightings
 WHERE location LIKE '%Pass%';
+
