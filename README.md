@@ -78,5 +78,5 @@ WHERE role = 'Developer' AND name LIKE 'M%';</code></pre>
   FROM sightings
   GROUP BY species_id;</code></pre>
 
-  <p>In summary, aggregate functions help you summarize data efficiently and gain insights like totals, counts, and averages from your dataset.</p>
+  <p>In summary, aggregate functions helps summarize data efficiently and gain insights like totals, counts, and averages from dataset.</p>
 </body>
