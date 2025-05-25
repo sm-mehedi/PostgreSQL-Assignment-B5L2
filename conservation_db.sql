@@ -47,23 +47,23 @@ Values(1, 1, 'Peak Ridge', '2024-05-10 07:45:00', 'Camera trap image captured'),
 
 SELECT*FROM sightings;
 
--- Problem - 1
+-- Problem 1
 INSERT INTO rangers (name, region)
 VALUES ('Derek Fox','Coastal Plains');
 
--- Problem - 2
+-- Problem 2
 SELECT COUNT(DISTINCT species_id) AS unique_species_count FROM sightings;
 
--- Problem - 3
+-- Problem 3
 SELECT sighting_id species_id, ranger_id, location, sighting_time, notes from sightings
 WHERE location LIKE '%Pass%';
 
--- Problem - 7
+-- Problem 7
 UPDATE species
 SET conservation_status = 'Historic'
 Where discovery_date < '1800-01-01';
 
--- Problem - 8
+-- Problem 8
 ALTER TABLE sightings ADD COLUMN time_of_day TEXT;
 
 UPDATE sightings
@@ -76,5 +76,8 @@ SET time_of_day =
 
 SELECT sighting_id, time_of_day
 FROM sightings;
+
+-- Problem 9
+
 
 
