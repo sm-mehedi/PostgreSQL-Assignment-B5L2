@@ -62,3 +62,19 @@ WHERE location LIKE '%Pass%';
 UPDATE species
 SET conservation_status = 'Historic'
 Where discovery_date < '1800-01-01';
+
+-- Problem - 8
+ALTER TABLE sightings ADD COLUMN time_of_day TEXT;
+
+UPDATE sightings
+SET time_of_day = 
+  CASE 
+    WHEN EXTRACT(HOUR FROM sighting_time) < 12 THEN 'Morning'
+    WHEN EXTRACT(HOUR FROM sighting_time) BETWEEN 12 AND 17 THEN 'Afternoon'
+    ELSE 'Evening'
+  END;
+
+SELECT sighting_id, time_of_day
+FROM sightings;
+
+
