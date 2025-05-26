@@ -9,7 +9,7 @@ CREATE TABLE rangers (
 INSERT INTO rangers (name, region)
 VALUES ('Alice Green', 'Northern Hills'),
         ('Bob White', 'River Delta'),
-        ('Carol King ', 'Mountain Range'),
+        ('Carol King ', 'Mountain Range')
        
 SELECT*FROM rangers;
 
@@ -79,5 +79,9 @@ FROM sightings;
 
 -- Problem 9
 
+DELETE FROM rangers
+WHERE ranger_id NOT IN (
+    SELECT DISTINCT ranger_id FROM sightings
+);
 
 
