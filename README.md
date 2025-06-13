@@ -1,8 +1,5 @@
-নিচে দেওয়া হয়েছে উপরের PostgreSQL বিষয়বস্তুর বাংলা অনুবাদ:
 
----
 
-<h2>PostgreSQL এর প্রাথমিক ধারণা</h2>
 
 <h3>What is PostgreSQL?</h3>
 <p>
