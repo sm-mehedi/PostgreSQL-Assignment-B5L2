@@ -97,12 +97,13 @@ UPDATE sightings
 SET time_of_day = 
   CASE 
     WHEN EXTRACT(HOUR FROM sighting_time) < 12 THEN 'Morning'
-    WHEN EXTRACT(HOUR FROM sighting_time) BETWEEN 12 AND 17 THEN 'Afternoon'
+    WHEN EXTRACT(HOUR FROM sighting_time) >= 12 AND EXTRACT(HOUR FROM sighting_time) <= 17 THEN 'Afternoon'
     ELSE 'Evening'
   END;
 
 SELECT sighting_id, time_of_day
 FROM sightings;
+
 
 -- Problem 9
 DELETE FROM rangers
